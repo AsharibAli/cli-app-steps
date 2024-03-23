@@ -46,27 +46,54 @@ This project is a **Command Line Interface (CLI) calculator** implemented in **T
      ```
 
 6. **Update package.json Configuration**
-   - Modify your `package.json` to recognize TypeScript modules by adding `"type": "module"` right after the `"main"` property:
+   - Modify these lines of code in your `package.json`:
      ```json
      {
+      "name": "@your-npm-usernmae/calculator", 
        "main": "index.js",
-       "type": "module"
+       "type": "module",
+       "publishConfig": {
+        "access": "public"
+      },
+       "bin": {
+        "calculator": "./index.js"
+      },
      }
      ```
 
 7. **Implement the CLI Calculator**
-   - Write your calculator logic in `index.ts`.
+   - Start your calculator code in `index.ts`. At the top of this file, include the shebang:
+  ```
+   #! /usr/bin/env node
+  ```
 
-8. **Compile TypeScript to JavaScript**
+1. **Compile TypeScript to JavaScript**
    - Compile your TypeScript file (`index.ts`) to JavaScript using:
      ```
      tsc index.ts
      ```
 
-9. **Run Your Project**
+2. **Run Your Project**
    - Execute your CLI calculator with:
      ```
      node index.js
+     ```
+
+#### **Publishing Your Project on npm**
+
+To make your CLI calculator accessible to others, follow these steps to publish your project on npm:
+
+1. **Log in to npm**
+   - If you haven't already, you will need to create an npm account [npmjs.com](npmjs.com). Once you have your account set up, log in to npm from your command line:
+     ```
+     npm login
+     ```
+   - Enter your username, password, and email address as prompted.
+
+2. **Publish Your Package**
+   - Publish your package to npm, ensuring it is available publicly:
+     ```
+     npm publish
      ```
 
 #### **Conclusion**
