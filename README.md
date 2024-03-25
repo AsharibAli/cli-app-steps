@@ -70,7 +70,7 @@ This project is a **Command Line Interface (CLI) calculator** implemented in **T
 1. **Compile TypeScript to JavaScript**
    - Compile your TypeScript file (`index.ts`) to JavaScript using:
      ```
-     tsc index.ts
+     tsc
      ```
 
 2. **Run Your Project**
